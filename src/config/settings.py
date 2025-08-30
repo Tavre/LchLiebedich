@@ -31,6 +31,7 @@ class ServerConfig(BaseModel):
     host: str = Field(default="0.0.0.0", description="服务器监听地址")
     port: int = Field(default=8080, description="服务器监听端口")
     debug: bool = Field(default=False, description="调试模式")
+    workers: int = Field(default=1, description="工作线程数")
 
 class StorageConfig(BaseModel):
     """存储配置"""
@@ -42,21 +43,23 @@ class StorageConfig(BaseModel):
 class LogConfig(BaseModel):
     """日志配置"""
     level: str = Field(default="INFO", description="日志级别")
-    file_path: str = Field(default="logs/bot.log", description="日志文件路径")
+    file: str = Field(default="logs/bot.log", description="日志文件路径")
     max_size: str = Field(default="10 MB", description="单个日志文件最大大小")
     retention: str = Field(default="7 days", description="日志保留时间")
     rotation: str = Field(default="1 day", description="日志轮转间隔")
+    console: bool = Field(default=True, description="是否输出到控制台")
 
 class WordLibConfig(BaseModel):
     """词库配置"""
-    data_dir: str = Field(default="data/wordlib", description="词库文件夹路径")
-    data_file: str = Field(default="data/wordlib.json", description="词库数据文件路径")
+    path: str = Field(default="data/wordlib", description="词库文件夹路径")
+    json_storage_path: str = Field(default="data/wordlib.json", description="词库数据文件路径")
     encoding: str = Field(default="utf-8", description="词库文件编码")
-    file_watch: bool = Field(default=True, description="是否启用文件监控")
+    auto_reload: bool = Field(default=True, description="是否启用文件监控")
     enable_pseudocode: bool = Field(default=True, description="是否启用伪代码处理")
     default_match_type: str = Field(default="exact", description="默认匹配类型")
     case_sensitive: bool = Field(default=False, description="是否区分大小写")
     max_reply_length: int = Field(default=1000, description="最大回复长度")
+    cache_size: int = Field(default=1000, description="缓存大小")
 
 class OneBotEngineConfig(BaseModel):
     """OneBot监听配置"""

@@ -37,11 +37,12 @@ class LexiconEntry:
 class LchliebedichEngine:
     """lchliebedich词库解析引擎"""
     
-    def __init__(self):
+    def __init__(self, bot=None):
         self.entries: List[LexiconEntry] = []
         self.global_variables: Dict[str, Any] = {}
         self.message_context: Dict[str, Any] = {}
         self.functions = self._init_functions()
+        self.bot = bot  # OneBot API实例，用于获取群信息等
         
     def _init_functions(self) -> Dict[str, callable]:
         """初始化内置函数"""
@@ -306,7 +307,21 @@ class LchliebedichEngine:
         try:
             # 使用正则表达式匹配
             pattern = re.compile(trigger, re.IGNORECASE)
-            match = pattern.search(message)
+            
+            # 检查是否为完整匹配模式（以^开头或$结尾）
+            if trigger.startswith('^') or trigger.endswith('$'):
+                # 已经指定了边界，使用原始匹配
+                match = pattern.search(message)
+            else:
+                # 没有指定边界的简单触发词，使用完整匹配
+                # 检查是否包含正则表达式特殊字符
+                regex_chars = r'[.*+?^${}()|[\]\\]'
+                if re.search(regex_chars, trigger):
+                    # 包含正则字符，使用search匹配
+                    match = pattern.search(message)
+                else:
+                    # 简单文本，使用完整匹配（避免部分匹配）
+                    match = pattern.fullmatch(message)
             
             if match:
                 # 保存匹配的参数和括号内容
@@ -479,6 +494,8 @@ class LchliebedichEngine:
             'GroupId': self.message_context.get('group_id', ''),
             '群': self.message_context.get('group_id', ''),
             'Groupid': self.message_context.get('group_id', ''),
+            '群名': self._get_group_name(),
+            'GroupName': self._get_group_name(),
             'MSG': self.message_context.get('raw_message', ''),
             'MSGJ': json.dumps(self.message_context, ensure_ascii=False),
             '登录账号': self.message_context.get('self_id', ''),
@@ -505,6 +522,24 @@ class LchliebedichEngine:
             return '好友消息'
         else:
             return '其他消息'
+    
+    def _get_group_name(self) -> str:
+        """获取群名称"""
+        # 如果不是群聊消息，返回空字符串
+        if self.message_context.get('message_type') != 'group':
+            return ''
+        
+        group_id = self.message_context.get('group_id')
+        if not group_id:
+            return ''
+        
+        # 尝试从消息上下文中获取群名称（如果已经缓存）
+        if 'group_name' in self.message_context:
+            return self.message_context['group_name']
+        
+        # 由于异步获取群信息会导致时序问题，这里返回空字符串
+        # 群信息应该在消息处理前预先获取并设置到message_context中
+        return ''
     
     def _call_function(self, func_content: str) -> Any:
         """调用函数"""

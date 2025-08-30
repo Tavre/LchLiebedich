@@ -18,6 +18,7 @@ from .wordlib_window import WordLibWindow
 from .config_window import ConfigWindow
 from .log_window import LogWindow
 from ..wordlib.manager import LchliebedichWordLibManager
+from ..config.settings import ConfigManager
 from ..utils.logger import get_logger
 
 class MainWindow:
@@ -489,7 +490,9 @@ class MainWindow:
     def open_config_window(self):
         """打开配置窗口"""
         if self.config_window is None or not self.config_window.window.winfo_exists():
-            self.config_window = ConfigWindow(self.root, None)
+            config_manager = ConfigManager()
+            config = config_manager.load_config()
+            self.config_window = ConfigWindow(self.root, config)
         else:
             self.config_window.window.lift()
             

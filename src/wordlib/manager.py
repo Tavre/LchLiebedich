@@ -56,7 +56,7 @@ class LchliebedichWordLibManager(WordLibManager):
             for filename in self.enabled_files:
                 file_path = os.path.join(self.wordlib_dir, filename)
                 if os.path.exists(file_path):
-                    engine = LchliebedichEngine()
+                    engine = LchliebedichEngine(bot=self.bot)
                     if engine.load_lexicon_file(file_path):
                         self.engines[filename] = engine
                         print(f"词库文件加载成功: {filename}")
@@ -84,7 +84,7 @@ class LchliebedichWordLibManager(WordLibManager):
             print(f"词库文件不存在: {file_path}")
             return False
         
-        engine = LchliebedichEngine()
+        engine = LchliebedichEngine(bot=self.bot)
         if engine.load_lexicon_file(file_path):
             self.engines[filename] = engine
             if filename not in self.enabled_files:

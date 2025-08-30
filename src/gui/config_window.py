@@ -450,8 +450,21 @@ class ConfigWindow:
             # 日志配置
             self.config_vars['log_level'].set(self.config.log.level)
             self.config_vars['log_file'].set(self.config.log.file)
-            self.config_vars['log_max_size'].set(self.config.log.max_size)
-            self.config_vars['log_retention'].set(self.config.log.retention)
+            # 处理max_size字段，如果是字符串则提取数字部分
+            max_size = self.config.log.max_size
+            if isinstance(max_size, str):
+                # 提取字符串中的数字部分，如"10 MB" -> 10
+                import re
+                match = re.search(r'(\d+)', max_size)
+                max_size = int(match.group(1)) if match else 10
+            self.config_vars['log_max_size'].set(max_size)
+            # 处理retention字段，如果是字符串则提取数字部分
+            retention = self.config.log.retention
+            if isinstance(retention, str):
+                # 提取字符串中的数字部分，如"7 days" -> 7
+                match = re.search(r'(\d+)', retention)
+                retention = int(match.group(1)) if match else 7
+            self.config_vars['log_retention'].set(retention)
             self.config_vars['log_console'].set(self.config.log.console)
             
             # 词库配置
@@ -475,8 +488,9 @@ class ConfigWindow:
             # 更新配置对象
             self.update_config_object()
             
-            # 保存配置
-            self.config_manager.save_config(self.config)
+            # 更新ConfigManager的配置对象并保存
+            self.config_manager.config = self.config
+            self.config_manager.save_config()
             
             messagebox.showinfo("成功", "配置已保存")
             
@@ -604,8 +618,12 @@ class ConfigWindow:
         # 日志配置
         self.config.log.level = self.config_vars['log_level'].get()
         self.config.log.file = self.config_vars['log_file'].get()
-        self.config.log.max_size = self.config_vars['log_max_size'].get()
-        self.config.log.retention = self.config_vars['log_retention'].get()
+        # 将整数值转换为带单位的字符串格式
+        max_size_value = self.config_vars['log_max_size'].get()
+        self.config.log.max_size = f"{max_size_value} MB"
+        # 将整数值转换为带单位的字符串格式
+        retention_value = self.config_vars['log_retention'].get()
+        self.config.log.retention = f"{retention_value} days"
         self.config.log.console = self.config_vars['log_console'].get()
         
         # 词库配置

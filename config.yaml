@@ -1,101 +1,42 @@
-# OneBot V11 机器人框架配置文件
-
-# OneBot 配置
-onebot:
-  # OneBot HTTP API 地址
-  host: "127.0.0.1"
-  # OneBot HTTP API 端口
-  port: 8029
-  # HTTP API 路径
-  path: "/"
-  # 访问令牌（可选）
-  access_token: ""
-  # 签名密钥（可选）
-  secret: ""
-  # 超时时间（秒）
-  timeout: 30
-  # 重试次数
-  retry_count: 3
-  # 重试间隔（秒）
-  retry_interval: 5
-  # 心跳间隔（毫秒）
-  heartbeat_interval: 5000
-  # 重连间隔（毫秒）
-  reconnect_interval: 5000
-
-# HTTP 服务器配置
-server:
-  # 监听地址
-  host: "127.0.0.1"
-  # 监听端口
-  port: 8080
-  # 是否启用调试模式
-  debug: false
-  # 工作进程数
-  workers: 1
-  # 请求超时时间（秒）
-  timeout: 60
-
-# 存储配置
-storage:
-  # 存储类型（json）
-  type: "json"
-  # 数据目录
-  data_dir: "data"
-  # 是否启用自动备份
-  auto_backup: true
-  # 备份间隔（小时）
-  backup_interval: 24
-
-# 日志配置
 log:
-  # 日志级别（DEBUG/INFO/WARNING/ERROR/CRITICAL）
-  level: "INFO"
-  # 日志文件路径
-  file_path: "logs/bot.log"
-  # 单个日志文件最大大小（MB）
-  max_size: "10 MB"
-  # 保留的日志文件数量
-  backup_count: 5
-  # 日志轮转间隔（天）
-  rotation_days: 1
-  # 是否输出到控制台
   console: true
-  # 日志格式
-  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {name} | {message}"
-
-# 词库配置
+  file: logs/bot.log
+  level: INFO
+  max_size: 10 MB
+  retention: 7 days
+  rotation: 1 day
+onebot:
+  access_token: null
+  heartbeat_interval: 5000
+  host: 127.0.0.1
+  path: /
+  port: 8029
+  reconnect_interval: 5000
+  retry_count: 3
+  retry_interval: 5
+  secret: null
+  timeout: 30
+onebot_engine:
+  config_path: engine/appsettings.json
+  login_timeout: 60
+  working_dir: engine
+server:
+  debug: false
+  host: 127.0.0.1
+  port: 8080
+  workers: 1
+storage:
+  auto_backup: true
+  backup_interval: 24
+  data_dir: data
+  type: json
 wordlib:
-  # 词库目录
-  data_dir: "data/wordlib"
-  # 词库数据文件
-  data_file: "data/wordlib.json"
-  # 是否启用文件监控
-  file_watch: true
-  # 是否启用伪代码处理
-  enable_pseudocode: true
-  # 默认匹配类型（exact/fuzzy/regex）
-  default_match_type: "exact"
-  # 是否区分大小写
+  auto_reload: true
+  cache_size: 1000
   case_sensitive: false
-  # 最大回复长度
+  default_match_type: exact
+  enable_pseudocode: true
+  encoding: utf-8
+  json_storage_path: data/wordlib.json
   max_reply_length: 1000
-
-# 机器人配置
-bot:
-  # 机器人名称
-  name: "OneBot机器人"
-  # 机器人描述
-  description: "基于OneBot V11协议的机器人框架"
-  # 管理员QQ号列表
-  admins: []
-  # 是否启用群聊
-  enable_group: true
-  # 是否启用私聊
-  enable_private: true
-  # 命令前缀
-  command_prefix: "/"
-  # 是否启用统计功能
-  enable_stats: true
-  # 是否启用错误报告
-  enable_error_report: true
+  path: data/wordlib

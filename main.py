@@ -100,9 +100,9 @@ def main():
         # 设置窗口关闭事件
         def on_closing():
             logger.info("正在关闭程序...")
-            if onebot_engine and onebot_engine.is_running:
-                logger.info("正在停止OneBot引擎...")
-                onebot_engine.stop()
+            if onebot_engine:
+                logger.info("正在停止OneBot监听器...")
+                # OneBot引擎现在是监听器模式，无需手动停止
             root.destroy()
             
         root.protocol("WM_DELETE_WINDOW", on_closing)

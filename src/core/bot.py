@@ -7,7 +7,7 @@ OneBot V11 机器人核心模块
 
 import asyncio
 import json
-
+import aiohttp
 import time
 from typing import Dict, Any, Optional, Callable, List
 from dataclasses import dataclass
@@ -48,34 +48,50 @@ class OneBotAPI:
     def __init__(self, config, server=None):
         self.config = config
         self.server = server
+        self.base_url = f"http://{config.onebot.host}:{config.onebot.port}"
+        self.timeout = aiohttp.ClientTimeout(total=config.onebot.timeout)
+        
+    async def _make_request(self, action: str, params: Dict[str, Any]) -> Dict[str, Any]:
+        """发送HTTP API请求"""
+        url = f"{self.base_url}/{action}"
+        headers = {"Content-Type": "application/json"}
+        
+        # 添加访问令牌（如果配置了）
+        if hasattr(self.config.onebot, 'access_token') and self.config.onebot.access_token:
+            headers["Authorization"] = f"Bearer {self.config.onebot.access_token}"
+        
+        try:
+            async with aiohttp.ClientSession(timeout=self.timeout) as session:
+                async with session.post(url, json=params, headers=headers) as response:
+                    if response.status == 200:
+                        result = await response.json()
+                        logger.debug(f"[OneBot] API请求成功: {action} -> {result}")
+                        return result
+                    else:
+                        logger.error(f"[OneBot] API请求失败: {action}, 状态码: {response.status}")
+                        return {"status": "failed", "retcode": response.status}
+        except asyncio.TimeoutError:
+            logger.error(f"[OneBot] API请求超时: {action}")
+            return {"status": "failed", "retcode": -1, "msg": "timeout"}
+        except Exception as e:
+            logger.error(f"[OneBot] API请求异常: {action}, 错误: {e}")
+            return {"status": "failed", "retcode": -1, "msg": str(e)}
             
     async def send_private_msg(self, user_id: int, message: str, auto_escape: bool = False) -> Dict[str, Any]:
         """发送私聊消息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("send_private_msg", {
-                "user_id": user_id,
-                "message": message,
-                "auto_escape": auto_escape
-            })
-            if result:
-                return result
-        
-        logger.error("无法发送私聊消息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("send_private_msg", {
+            "user_id": user_id,
+            "message": message,
+            "auto_escape": auto_escape
+        })
         
     async def send_group_msg(self, group_id: int, message: str, auto_escape: bool = False) -> Dict[str, Any]:
         """发送群消息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("send_group_msg", {
-                "group_id": group_id,
-                "message": message,
-                "auto_escape": auto_escape
-            })
-            if result:
-                return result
-        
-        logger.error("无法发送群消息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("send_group_msg", {
+            "group_id": group_id,
+            "message": message,
+            "auto_escape": auto_escape
+        })
         
     async def send_msg(self, message_type: str, target_id: int, message: str, **kwargs) -> Dict[str, Any]:
         """发送消息（通用）"""
@@ -89,53 +105,29 @@ class OneBotAPI:
             
     async def get_login_info(self) -> Dict[str, Any]:
         """获取登录号信息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("get_login_info", {})
-            if result:
-                return result
-        
-        logger.error("无法获取登录信息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("get_login_info", {})
         
     async def get_stranger_info(self, user_id: int, no_cache: bool = False) -> Dict[str, Any]:
         """获取陌生人信息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("get_stranger_info", {
-                "user_id": user_id,
-                "no_cache": no_cache
-            })
-            if result:
-                return result
-        
-        logger.error("无法获取陌生人信息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("get_stranger_info", {
+            "user_id": user_id,
+            "no_cache": no_cache
+        })
         
     async def get_group_info(self, group_id: int, no_cache: bool = False) -> Dict[str, Any]:
         """获取群信息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("get_group_info", {
-                "group_id": group_id,
-                "no_cache": no_cache
-            })
-            if result:
-                return result
-        
-        logger.error("无法获取群信息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("get_group_info", {
+            "group_id": group_id,
+            "no_cache": no_cache
+        })
         
     async def get_group_member_info(self, group_id: int, user_id: int, no_cache: bool = False) -> Dict[str, Any]:
         """获取群成员信息"""
-        if self.server and hasattr(self.server, 'send_websocket_message'):
-            result = await self.server.send_websocket_message("get_group_member_info", {
-                "group_id": group_id,
-                "user_id": user_id,
-                "no_cache": no_cache
-            })
-            if result:
-                return result
-        
-        logger.error("无法获取群成员信息: 没有可用的WebSocket连接")
-        return {}
+        return await self._make_request("get_group_member_info", {
+            "group_id": group_id,
+            "user_id": user_id,
+            "no_cache": no_cache
+        })
 
 class OneBotServer:
     """OneBot WebSocket服务器"""
@@ -147,24 +139,7 @@ class OneBotServer:
         self.websocket_connection = None
         self.setup_routes()
     
-    async def send_websocket_message(self, action: str, params: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-        """通过WebSocket发送消息"""
-        if not self.websocket_connection:
-            logger.error("[OneBot] WebSocket连接不可用")
-            return None
-            
-        try:
-            message = {
-                "action": action,
-                "params": params,
-                "echo": str(int(time.time() * 1000))
-            }
-            await self.websocket_connection.send_text(json.dumps(message))
-            logger.debug(f"[OneBot] 发送WebSocket消息: {message}")
-            return {"status": "ok"}
-        except Exception as e:
-            logger.error(f"[OneBot] WebSocket发送消息失败: {e}")
-            return None
+    # WebSocket API请求功能已移除，现在使用HTTP API
         
     def setup_routes(self):
         """设置路由"""
@@ -197,102 +172,41 @@ class OneBotServer:
                     # 接收消息
                     data = await websocket.receive_json()
                     
-                    # 检查是否为API请求
-                    if "action" in data:
-                        # 处理API请求
-                        action = data.get("action")
-                        params = data.get("params", {})
-                        echo = data.get("echo")
-                        
-                        logger.info(f"[OneBot] 收到API请求 - 动作:{action} 参数:{params}")
-                        
-                        # 处理API请求
-                        try:
-                            if action == "get_login_info":
-                                result = {"user_id": 123456, "nickname": "测试机器人"}
-                                response = {
-                                    "status": "ok",
-                                    "retcode": 0,
-                                    "data": result,
-                                    "echo": echo
-                                }
-                            elif action == "send_private_msg":
-                                user_id = params.get("user_id")
-                                message = params.get("message")
-                                # 这里应该调用实际的发送消息逻辑
-                                response = {
-                                    "status": "ok",
-                                    "retcode": 0,
-                                    "data": {"message_id": 12345},
-                                    "echo": echo
-                                }
-                            elif action == "send_group_msg":
-                                group_id = params.get("group_id")
-                                message = params.get("message")
-                                # 这里应该调用实际的发送消息逻辑
-                                response = {
-                                    "status": "ok",
-                                    "retcode": 0,
-                                    "data": {"message_id": 12345},
-                                    "echo": echo
-                                }
-                            else:
-                                # 不支持的API
-                                response = {
-                                    "status": "failed",
-                                    "retcode": -1,
-                                    "data": None,
-                                    "echo": echo
-                                }
-                        except Exception as e:
-                            logger.error(f"[OneBot] API请求处理失败: {e}")
-                            response = {
-                                "status": "failed",
-                                "retcode": -1,
-                                "data": None,
-                                "echo": echo
-                            }
-                        
-                        # 发送API响应
-                        await websocket.send_json(response)
-                        logger.info(f"[OneBot] 发送API响应: {response}")
-                        
-                    else:
-                        # 处理OneBot事件
-                        post_type = data.get("post_type", "unknown")
-                        if post_type == "message":
-                            message_type = data.get("message_type", "unknown")
-                            user_id = data.get("user_id", "unknown")
-                            group_id = data.get("group_id", "")
-                            message = data.get("message", "")
-                            if message_type == "private":
-                                logger.info(f"[OneBot] 收到私聊消息 - 用户:{user_id} 内容:{message}")
-                            elif message_type == "group":
-                                logger.info(f"[OneBot] 收到群聊消息 - 群:{group_id} 用户:{user_id} 内容:{message}")
-                            else:
-                                logger.info(f"[OneBot] 收到消息事件: {data}")
-                        elif post_type == "notice":
-                            notice_type = data.get("notice_type", "unknown")
-                            logger.info(f"[OneBot] 收到通知事件 - 类型:{notice_type}")
-                        elif post_type == "request":
-                            request_type = data.get("request_type", "unknown")
-                            logger.info(f"[OneBot] 收到请求事件 - 类型:{request_type}")
-                        elif post_type == "meta_event":
-                            meta_event_type = data.get("meta_event_type", "unknown")
-                            if meta_event_type == "heartbeat":
-                                logger.debug(f"[OneBot] 收到心跳事件")
-                            else:
-                                logger.info(f"[OneBot] 收到元事件 - 类型:{meta_event_type}")
+                    # 处理OneBot事件
+                    post_type = data.get("post_type", "unknown")
+                    if post_type == "message":
+                        message_type = data.get("message_type", "unknown")
+                        user_id = data.get("user_id", "unknown")
+                        group_id = data.get("group_id", "")
+                        message = data.get("message", "")
+                        if message_type == "private":
+                            logger.info(f"[OneBot] 收到私聊消息 - 用户:{user_id} 内容:{message}")
+                        elif message_type == "group":
+                            logger.info(f"[OneBot] 收到群聊消息 - 群:{group_id} 用户:{user_id} 内容:{message}")
                         else:
-                            logger.info(f"[OneBot] 收到未知事件: {data}")
-                        
-                        # 处理事件
-                        response = await self.event_handler(data)
-                        
-                        # 发送响应（如果有）
-                        if response:
-                            await websocket.send_json(response)
-                            logger.info(f"[OneBot] 发送响应: {response}")
+                            logger.info(f"[OneBot] 收到消息事件: {data}")
+                    elif post_type == "notice":
+                        notice_type = data.get("notice_type", "unknown")
+                        logger.info(f"[OneBot] 收到通知事件 - 类型:{notice_type}")
+                    elif post_type == "request":
+                        request_type = data.get("request_type", "unknown")
+                        logger.info(f"[OneBot] 收到请求事件 - 类型:{request_type}")
+                    elif post_type == "meta_event":
+                        meta_event_type = data.get("meta_event_type", "unknown")
+                        if meta_event_type == "heartbeat":
+                            logger.debug(f"[OneBot] 收到心跳事件")
+                        else:
+                            logger.info(f"[OneBot] 收到元事件 - 类型:{meta_event_type}")
+                    else:
+                        logger.info(f"[OneBot] 收到未知事件: {data}")
+                    
+                    # 处理事件
+                    response = await self.event_handler(data)
+                    
+                    # 发送响应（如果有）
+                    if response:
+                        await websocket.send_json(response)
+                        logger.info(f"[OneBot] 发送响应: {response}")
                         
             except WebSocketDisconnect:
                 logger.info("OneBot WebSocket连接已断开")
@@ -482,6 +396,24 @@ class MessageHandler:
             "nickname": event.sender.get("nickname", "用户")  # 添加nickname字段支持%昵称%变量
         }
         
+        # 如果是群聊消息，预先获取群信息
+        if event.message_type == 'group' and event.group_id:
+            try:
+                # 获取群信息并添加到context中
+                group_info = await self.wordlib_manager.bot.get_group_info(event.group_id)
+                if group_info:
+                    # 检查是否是标准的OneBot API响应格式
+                    if 'data' in group_info and group_info.get('status') == 'ok':
+                        group_name = group_info['data'].get('group_name', '')
+                    else:
+                        # 直接返回的群信息格式
+                        group_name = group_info.get('group_name', '')
+                    
+                    if group_name:
+                        context['group_name'] = group_name
+            except Exception as e:
+                logger.debug(f"获取群信息失败: {e}")
+        
         # 首先尝试词库匹配
         response = self.wordlib_manager.find_response(message, context)
         if response:
@@ -506,10 +438,10 @@ class OneBotFramework:
         self.logger = get_logger("OneBotFramework")
         
         # 初始化组件
-        self.wordlib_manager = LchliebedichWordLibManager(self, self.config)
-        self.message_handler = MessageHandler(self.wordlib_manager)
         self.server = OneBotServer(config, self._handle_event)
         self.api = OneBotAPI(config, self.server)
+        self.wordlib_manager = LchliebedichWordLibManager(self.api, self.config)
+        self.message_handler = MessageHandler(self.wordlib_manager)
         
         # 状态
         self.running = False
@@ -551,6 +483,12 @@ class OneBotFramework:
             user_id = data.get("user_id")
             group_id = data.get("group_id")
             message = data.get("message", "")
+            self_id = data.get("self_id")
+            
+            # 检查是否为机器人自己发送的消息，如果是则忽略
+            if user_id == self_id:
+                self.logger.debug(f"[OneBot] 忽略机器人自己的消息 - 用户:{user_id}")
+                return None
             
             # 记录消息处理日志
             if message_type == "private":

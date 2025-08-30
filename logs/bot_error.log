@@ -1,371 +1,138 @@
-2025-08-28 14:57:55 | ERROR    | __main__:main:48 - 程序启动失败: name 'SecludedProcessor' is not defined
+2025-08-30 21:05:38 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_login_info
 
-2025-08-28 15:43:48 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:05:38 | ERROR    | src.core.bot:get_login_info:97 - 无法获取登录信息: 没有可用的WebSocket连接
 
-2025-08-28 15:43:48 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:05:50 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:43:49 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:05:50 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:43:49 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:05:55 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: send_group_msg
 
-2025-08-28 15:43:54 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:05:55 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
 
-2025-08-28 15:43:54 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:00 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:43:59 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:00 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:43:59 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:05 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: send_group_msg
 
-2025-08-28 15:44:04 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:05 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
 
-2025-08-28 15:44:04 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:10 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:44:09 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:10 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:44:09 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:15 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:44:14 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:15 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:44:14 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:20 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:44:19 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:20 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:44:19 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:25 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:44:24 | ERROR    | src.gui.main_window:update_wordlib_info:379 - 更新机器人信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:25 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 15:44:24 | ERROR    | src.gui.main_window:update_stats_info:409 - 更新统计信息失败: 'OneBotEngine' object has no attribute 'is_engine_running'
+2025-08-30 21:06:30 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 15:45:23 | ERROR    | src.gui.wordlib_window:test_reply:559 - 测试回复失败: 'WordLibManager' object has no attribute 'pseudocode_processor'
+2025-08-30 21:06:30 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:06:56 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:06:35 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:07:45 | ERROR    | src.core.bot:_handle_message_event:452 - 处理消息事件失败: 'list' object has no attribute 'strip'
+2025-08-30 21:06:35 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:11:16 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:06:59 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:12:58 | ERROR    | src.core.bot:_handle_message_event:523 - [OneBot] 处理消息事件失败: 'list' object has no attribute 'strip'
+2025-08-30 21:06:59 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:13:07 | ERROR    | src.core.bot:_handle_message_event:523 - [OneBot] 处理消息事件失败: 'list' object has no attribute 'strip'
+2025-08-30 21:07:04 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: send_group_msg
 
-2025-08-28 16:13:17 | ERROR    | src.core.bot:_handle_message_event:523 - [OneBot] 处理消息事件失败: 'list' object has no attribute 'strip'
+2025-08-30 21:07:04 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
 
-2025-08-28 16:14:26 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:09 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:17:26 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:09 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:18:07 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:14 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:18:47 | ERROR    | src.core.bot:_request:76 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:14 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:23:02 | ERROR    | src.core.bot:_request:77 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:19 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:25:22 | ERROR    | src.core.bot:_request:77 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:19 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:31:25 | ERROR    | src.core.bot:websocket_root:334 - WebSocket连接错误: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
+2025-08-30 21:07:24 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:31:25 | ERROR    | src.core.bot:websocket_root:336 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 295, in websocket_root
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
+2025-08-30 21:07:24 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
+2025-08-30 21:07:43 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:31:35 | ERROR    | src.core.bot:_request:77 - API请求失败: {'detail': 'Not Found'}
+2025-08-30 21:07:43 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:34:54 | ERROR    | src.core.bot:websocket_endpoint:278 - WebSocket连接错误: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
+2025-08-30 21:07:51 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:34:54 | ERROR    | src.core.bot:websocket_endpoint:280 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 239, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
+2025-08-30 21:07:51 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
+2025-08-30 21:07:56 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:36:53 | ERROR    | src.core.bot:_request:81 - API请求异常: [WinError 64] 指定的网络名不再可用。
+2025-08-30 21:07:56 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:37:25 | ERROR    | src.core.bot:_request:81 - API请求异常: 
+2025-08-30 21:08:28 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:40:54 | ERROR    | src.gui.config_window:load_config:457 - 加载配置失败: 'NoneType' object has no attribute 'onebot'
+2025-08-30 21:08:28 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:42:34 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:08:33 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:43:38 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:08:33 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:43:58 | ERROR    | src.gui.wordlib_window:toggle_enabled:506 - 切换启用状态失败: 'WordLibManager' object has no attribute 'get_entry'
+2025-08-30 21:08:38 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:44:01 | ERROR    | src.gui.wordlib_window:toggle_enabled:506 - 切换启用状态失败: 'WordLibManager' object has no attribute 'get_entry'
+2025-08-30 21:08:38 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:47:20 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:09:26 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:47:25 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:09:26 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:47:36 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:09:43 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:47:43 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:09:43 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:49:28 | ERROR    | src.core.bot:send_websocket_message:160 - [OneBot] WebSocket连接不可用
+2025-08-30 21:09:48 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:55:41 | ERROR    | __main__:main:114 - 程序启动失败: expected str, bytes or os.PathLike object, not BotConfig
+2025-08-30 21:09:48 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:56:02 | ERROR    | __main__:main:114 - 程序启动失败: name 'wordlib_dir' is not defined
+2025-08-30 21:09:59 | ERROR    | src.core.bot:send_websocket_message:177 - [OneBot] API请求超时: get_group_info
 
-2025-08-28 16:57:03 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:09:59 | ERROR    | src.core.bot:get_group_info:123 - 无法获取群信息: 没有可用的WebSocket连接
 
-2025-08-28 16:57:03 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:15:13 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_login_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:04 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:15:30 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:04 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:15:46 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:09 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:15:48 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: send_group_msg, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:09 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:16:25 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:14 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:16:35 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:14 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:16:47 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:19 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:16:49 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: send_group_msg, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:19 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:17:01 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:24 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:17:07 | ERROR    | src.core.bot:_make_request:77 - [OneBot] API请求异常: get_group_info, 错误: Cannot connect to host 127.0.0.1:8029 ssl:default [远程计算机拒绝网络连接。]
 
-2025-08-28 16:57:24 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:36:20 | ERROR    | src.gui.config_window:load_config:465 - 加载配置失败: 'NoneType' object has no attribute 'onebot'
 
-2025-08-28 16:57:29 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:38:10 | ERROR    | src.gui.config_window:load_config:465 - 加载配置失败: 'ServerConfig' object has no attribute 'workers'
 
-2025-08-28 16:57:29 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:40:44 | ERROR    | src.gui.config_window:apply_config:484 - 保存配置失败: expected floating-point number but got "10 MB"
 
-2025-08-28 16:57:34 | ERROR    | src.gui.main_window:update_wordlib_info:409 - 更新机器人信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
+2025-08-30 21:42:06 | ERROR    | src.gui.config_window:apply_config:491 - 保存配置失败: expected floating-point number but got "7 days"
 
-2025-08-28 16:57:34 | ERROR    | src.gui.main_window:update_stats_info:439 - 更新统计信息失败: 'SecludedWordLibManager' object has no attribute 'get_all_entries'
-
-2025-08-28 16:58:24 | ERROR    | src.core.bot:_handle_message_event:581 - [OneBot] 处理消息事件失败: 'SecludedWordLibManager' object has no attribute 'find_response'
-
-2025-08-28 17:00:20 | ERROR    | src.core.bot:_handle_message_event:581 - [OneBot] 处理消息事件失败: 'SecludedWordLibManager' object has no attribute 'find_response'
-
-2025-08-28 17:05:02 | ERROR    | src.gui.wordlib_window:load_wordlib_list:305 - 加载词库列表失败: 'LexiconEntry' object has no attribute 'category'
-
-2025-08-28 17:05:19 | ERROR    | src.gui.config_window:load_config:457 - 加载配置失败: 'NoneType' object has no attribute 'onebot'
-
-2025-08-28 17:06:25 | ERROR    | src.gui.wordlib_window:load_wordlib_list:305 - 加载词库列表失败: 'LexiconEntry' object has no attribute 'enabled'
-
-2025-08-28 17:07:44 | ERROR    | src.gui.wordlib_window:load_wordlib_list:305 - 加载词库列表失败: 'LexiconEntry' object has no attribute 'id'
-
-2025-08-28 17:11:07 | ERROR    | src.gui.main_window:reload_wordlib:262 - 重载词库失败: 'SecludedWordLibManager' object has no attribute 'reload_all'
-
-2025-08-28 18:18:48 | ERROR    | src.core.bot:websocket_endpoint:327 - WebSocket连接错误: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-2025-08-28 18:18:48 | ERROR    | src.core.bot:websocket_endpoint:329 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-
-2025-08-28 18:18:52 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:19:23 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:20:23 | ERROR    | src.core.bot:websocket_endpoint:327 - WebSocket连接错误: (1000, '')
-
-2025-08-28 18:20:23 | ERROR    | src.core.bot:websocket_endpoint:329 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 18:21:29 | ERROR    | src.core.bot:websocket_endpoint:327 - WebSocket连接错误: (1000, '')
-
-2025-08-28 18:21:29 | ERROR    | src.core.bot:websocket_endpoint:329 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 18:21:47 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:21:54 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (1000, '')
-
-2025-08-28 18:21:54 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 18:22:18 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:22:47 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:23:18 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:23:36 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:24:07 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:24:18 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:24:33 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:24:49 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:25:00 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:30:33 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:31:04 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:35:23 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:35:37 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:38:42 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:39:13 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 18:39:14 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:39:23 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 18:40:00 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:46:29 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:46:31 | ERROR    | src.core.bot:_request:77 - API请求失败: {'status': 'failed', 'retcode': 16, 'data': None, 'echo': None}
-
-2025-08-28 20:46:34 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (1000, '')
-
-2025-08-28 20:46:34 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 20:46:59 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:47:29 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 20:48:48 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:48:49 | ERROR    | src.core.bot:_request:77 - API请求失败: {'status': 'failed', 'retcode': 16, 'data': None, 'echo': None}
-
-2025-08-28 20:49:08 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (1000, '')
-
-2025-08-28 20:49:08 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 20:49:59 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-2025-08-28 20:49:59 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-
-2025-08-28 20:53:38 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:54:08 | ERROR    | src.core.bot:_request:81 - API请求异常: 
-
-2025-08-28 20:54:13 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:54:14 | ERROR    | src.core.bot:_request:77 - API请求失败: {'status': 'failed', 'retcode': 16, 'data': None, 'echo': None}
-
-2025-08-28 20:54:15 | ERROR    | src.core.bot:send_websocket_message:209 - [OneBot] WebSocket连接不可用
-
-2025-08-28 20:54:16 | ERROR    | src.core.bot:_request:77 - API请求失败: {'status': 'failed', 'retcode': 110, 'data': None, 'echo': None}
-
-2025-08-28 20:54:20 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (1000, '')
-
-2025-08-28 20:54:20 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (1000, '')
-
-
-2025-08-28 21:01:45 | ERROR    | src.core.bot:websocket_endpoint:388 - WebSocket连接错误: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-2025-08-28 21:01:45 | ERROR    | src.core.bot:websocket_endpoint:390 - WebSocket错误详情: Traceback (most recent call last):
-  File "D:\lchliebedich\src\core\bot.py", line 288, in websocket_endpoint
-    data = await websocket.receive_json()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 136, in receive_json
-    self._raise_on_disconnect(message)
-  File "D:\lchliebedich\.venv\Lib\site-packages\starlette\websockets.py", line 114, in _raise_on_disconnect
-    raise WebSocketDisconnect(message["code"], message.get("reason"))
-starlette.websockets.WebSocketDisconnect: (<CloseCode.ABNORMAL_CLOSURE: 1006>, '')
-
-
-2025-08-28 21:31:02 | ERROR    | src.core.bot:send_websocket_message:153 - [OneBot] WebSocket连接不可用
-
-2025-08-28 21:31:02 | ERROR    | src.core.bot:get_login_info:97 - 无法获取登录信息: 没有可用的WebSocket连接
-
-2025-08-28 21:31:33 | ERROR    | src.core.bot:send_websocket_message:153 - [OneBot] WebSocket连接不可用
-
-2025-08-28 21:31:33 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
-
-2025-08-28 21:32:06 | ERROR    | src.core.bot:send_websocket_message:153 - [OneBot] WebSocket连接不可用
-
-2025-08-28 21:32:06 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
-
-2025-08-28 21:34:01 | ERROR    | src.core.bot:send_websocket_message:153 - [OneBot] WebSocket连接不可用
-
-2025-08-28 21:34:01 | ERROR    | src.core.bot:send_group_msg:77 - 无法发送群消息: 没有可用的WebSocket连接
-
-2025-08-29 00:23:50 | ERROR    | __main__:main:115 - 程序启动失败: name 'bot' is not defined
-
-2025-08-29 00:24:18 | ERROR    | __main__:main:115 - 程序启动失败: cannot access local variable 'onebot_framework' where it is not associated with a value
-
-2025-08-29 00:37:48 | ERROR    | src.gui.config_window:load_config:465 - 加载配置失败: 'NoneType' object has no attribute 'onebot'
+2025-08-30 21:45:37 | ERROR    | src.gui.config_window:apply_config:497 - 保存配置失败: ConfigManager.save_config() takes 1 positional argument but 2 were given
 
