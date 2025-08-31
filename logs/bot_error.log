@@ -136,3 +136,47 @@
 
 2025-08-30 21:45:37 | ERROR    | src.gui.config_window:apply_config:497 - 保存配置失败: ConfigManager.save_config() takes 1 positional argument but 2 were given
 
+2025-08-31 00:38:33 | ERROR    | src.gui.main_window_qt:open_config_window:966 - 打开配置窗口失败: name 'QWidget' is not defined
+
+2025-08-31 00:38:35 | ERROR    | src.gui.main_window_qt:open_log_window:980 - 打开日志窗口失败: expected str, bytes or os.PathLike object, not MainWindowQt
+
+2025-08-31 00:40:14 | ERROR    | src.gui.main_window_qt:open_log_window:980 - 打开日志窗口失败: 'LogWindowQt' object has no attribute 'export_btn'
+
+2025-08-31 00:40:16 | ERROR    | src.gui.main_window_qt:open_config_window:966 - 打开配置窗口失败: 'SiLineEdit' object has no attribute 'setEchoMode'
+
+2025-08-31 00:41:53 | ERROR    | src.gui.main_window_qt:open_config_window:966 - 打开配置窗口失败: 'SiLineEdit' object has no attribute 'setEchoMode'
+
+2025-08-31 00:41:55 | ERROR    | src.gui.main_window_qt:open_log_window:980 - 打开日志窗口失败: 'LogWindowQt' object has no attribute 'export_btn'
+
+2025-08-31 00:42:50 | ERROR    | src.gui.config_window_qt:load_config:392 - 加载配置失败: 'MainWindowQt' object has no attribute 'get_all_config'
+
+2025-08-31 00:42:51 | ERROR    | src.gui.main_window_qt:open_config_window:966 - 打开配置窗口失败: 'SiLineEdit' object has no attribute 'textChanged'
+
+2025-08-31 00:42:53 | ERROR    | src.gui.main_window_qt:open_log_window:980 - 打开日志窗口失败: 'LogWindowQt' object has no attribute 'export_btn'
+
+2025-08-31 00:47:35 | ERROR    | src.gui.main_window_qt:load_embedded_wordlib_list:1154 - 加载词库列表失败: name 'os' is not defined
+
+2025-08-31 00:47:35 | ERROR    | src.gui.main_window_qt:load_embedded_config:1590 - 加载配置失败: 'ConfigManager' object has no attribute 'get'
+
+2025-08-31 00:47:41 | ERROR    | __main__:main:108 - 程序启动失败: MainWindowQt.setup_log_viewer_embedded() takes 2 positional arguments but 3 were given
+
+2025-08-31 00:48:47 | ERROR    | src.gui.main_window_qt:load_embedded_wordlib_list:1154 - 加载词库列表失败: name 'os' is not defined
+
+2025-08-31 00:48:47 | ERROR    | src.gui.main_window_qt:load_embedded_config:1591 - 加载配置失败: 'ConfigManager' object has no attribute 'get'
+
+2025-08-31 00:48:49 | ERROR    | __main__:main:108 - 程序启动失败: MainWindowQt.setup_log_viewer_embedded() takes 2 positional arguments but 3 were given
+
+2025-08-31 00:49:35 | ERROR    | src.gui.main_window_qt:load_embedded_wordlib_list:1155 - 加载词库列表失败: expected str, bytes or os.PathLike object, not dict
+
+2025-08-31 00:49:35 | ERROR    | __main__:main:108 - 程序启动失败: MainWindowQt.setup_log_viewer_embedded() takes 2 positional arguments but 3 were given
+
+2025-08-31 00:54:06 | ERROR    | src.gui.main_window_qt:open_log_window:986 - 打开日志窗口失败: 'LogWindowQt' object has no attribute 'export_btn'
+
+2025-08-31 01:25:32 | ERROR    | src.gui.main_window_qt:show_help:371 - 打开帮助窗口失败: 'SiLineEdit' object has no attribute 'setPlaceholderText'
+
+2025-08-31 01:25:39 | ERROR    | src.gui.main_window_qt:show_help:371 - 打开帮助窗口失败: 'SiLineEdit' object has no attribute 'setPlaceholderText'
+
+2025-08-31 02:09:13 | ERROR    | src.gui.main_window_qt:load_embedded_config:2416 - 加载配置失败: 'SiLineEdit' object has no attribute 'setText'
+
+2025-08-31 02:10:31 | ERROR    | src.gui.main_window_qt:load_embedded_config:2416 - 加载配置失败: 'SiLineEdit' object has no attribute 'setText'
+

@@ -17,3 +17,4 @@ watchdog>=4.0.0
 # 其他工具
 requests>=2.31.0
 pillow>=10.0.0
+psutil>=5.9.0

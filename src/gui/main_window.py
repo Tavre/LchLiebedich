@@ -529,7 +529,7 @@ class MainWindow:
         """显示关于信息"""
         about_text = """
 
-版本: 0.1.0
+版本: 0.1.1
 
 基于OneBot V11协议的机器人框架
 

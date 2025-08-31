@@ -246,7 +246,53 @@ class LchliebedichEngine:
     def _parse_variable_definition(self, line: str) -> Tuple[str, str]:
         """解析变量定义"""
         parts = line.split(':', 1)
-        return parts[0].strip(), parts[1].strip()
+        var_name = parts[0].strip()
+        var_value = parts[1].strip()
+        
+        # 检查是否为中括号包含的数学表达式
+        if var_value.startswith('[') and var_value.endswith(']'):
+            expression = var_value[1:-1].strip()
+            try:
+                # 安全地计算数学表达式
+                result = self._evaluate_math_expression(expression)
+                var_value = str(result)
+            except Exception:
+                # 如果计算失败，保持原值
+                pass
+        
+        return var_name, var_value
+    
+    def _evaluate_math_expression(self, expression: str) -> str:
+        """安全地计算数学表达式"""
+        # 移除空格
+        expression = expression.replace(' ', '')
+        
+        # 只允许数字、基本运算符和小数点
+        allowed_chars = set('0123456789+-*/.()') 
+        if not all(c in allowed_chars for c in expression):
+            raise ValueError("表达式包含不允许的字符")
+        
+        # 使用eval计算，但限制在安全的数学运算范围内
+        # 为了安全，我们只允许基本的数学运算
+        try:
+            # 创建一个安全的命名空间，只包含基本的数学函数
+            safe_dict = {
+                "__builtins__": {},
+                "abs": abs,
+                "round": round,
+                "min": min,
+                "max": max
+            }
+            result = eval(expression, safe_dict, {})
+            result = float(result)
+            
+            # 如果结果是整数（小数部分为0），则返回整数格式
+            if result.is_integer():
+                return str(int(result))
+            else:
+                return str(result)
+        except Exception as e:
+            raise ValueError(f"无法计算表达式: {e}")
     
     def _parse_line_variable(self, lines: List[str], start_index: int) -> Tuple[str, int]:
         """解析行变量"""
@@ -304,6 +350,18 @@ class LchliebedichEngine:
     
     def _match_trigger(self, trigger: str, message: str) -> bool:
         """匹配触发词"""
+        # 处理多选项触发词（用|分隔）
+        if '|' in trigger and not trigger.startswith('^') and not trigger.endswith('$'):
+            # 检查是否包含正则表达式特殊字符（除了|）
+            regex_chars = r'[.*+?^${}()[\]\\]'
+            if not re.search(regex_chars, trigger):
+                # 简单的多选项触发词，拆分并逐个匹配
+                trigger_options = [option.strip() for option in trigger.split('|')]
+                for option in trigger_options:
+                    if option == message:
+                        return True
+                return False
+        
         try:
             # 使用正则表达式匹配
             pattern = re.compile(trigger, re.IGNORECASE)
@@ -315,7 +373,7 @@ class LchliebedichEngine:
             else:
                 # 没有指定边界的简单触发词，使用完整匹配
                 # 检查是否包含正则表达式特殊字符
-                regex_chars = r'[.*+?^${}()|[\]\\]'
+                regex_chars = r'[.*+?^${}()[\]\\]'
                 if re.search(regex_chars, trigger):
                     # 包含正则字符，使用search匹配
                     match = pattern.search(message)
@@ -351,8 +409,9 @@ class LchliebedichEngine:
     
     def _generate_response(self, entry: LexiconEntry, message: str) -> str:
         """生成回复内容"""
-        # 设置局部变量
-        local_vars = entry.variables.copy()
+        # 设置局部变量到全局变量中
+        if entry.variables:
+            self.global_variables.update(entry.variables)
         
         # 处理条件语句
         if entry.conditions:
@@ -363,9 +422,28 @@ class LchliebedichEngine:
         # 处理普通回复
         if entry.responses:
             response = '\n'.join(entry.responses)
+            # 处理多选项或逻辑（用|分隔的选项）
+            response = self._process_or_options(response)
             return self._process_variables_and_functions(response)
         
         return ''
+    
+    def _process_or_options(self, text: str) -> str:
+        """处理多选项或逻辑（用|分隔的选项替换为"或"）"""
+        lines = text.split('\n')
+        processed_lines = []
+        
+        for line in lines:
+            if '|' in line:
+                # 将|替换为"或"
+                processed_line = line.replace('|', '或')
+                processed_lines.append(processed_line)
+            else:
+                processed_lines.append(line)
+        
+        return '\n'.join(processed_lines)
+        
+        return text
     
     def _process_conditions(self, conditions: List[str]) -> Optional[str]:
         """处理条件语句"""
@@ -382,7 +460,7 @@ class LchliebedichEngine:
                     while i < len(conditions):
                         current_line = conditions[i].strip()
                         if current_line.startswith('返回'):
-                            return ""
+                            return '\n'.join(if_content)
                         if current_line.startswith(('else', '如果尾')):
                             break
                         if_content.append(conditions[i])
@@ -404,7 +482,7 @@ class LchliebedichEngine:
                         while i < len(conditions):
                             current_line = conditions[i].strip()
                             if current_line.startswith('返回'):
-                                return ""
+                                return '\n'.join(else_content)
                             if current_line.startswith('如果尾'):
                                 break
                             else_content.append(conditions[i])
@@ -420,8 +498,15 @@ class LchliebedichEngine:
         expr = self._process_variables_and_functions(expr)
         
         try:
-            # 简单的条件评估
-            if '==' in expr:
+            # 优先处理逻辑运算符（& 和 |），因为它们的优先级最低
+            if '&' in expr:
+                parts = expr.split('&')
+                return all(self._evaluate_condition(part.strip()) for part in parts)
+            elif '|' in expr:
+                parts = expr.split('|')
+                return any(self._evaluate_condition(part.strip()) for part in parts)
+            # 然后处理比较运算符
+            elif '==' in expr:
                 left, right = expr.split('==', 1)
                 return left.strip() == right.strip()
             elif '!=' in expr:
@@ -439,12 +524,6 @@ class LchliebedichEngine:
             elif '>' in expr:
                 left, right = expr.split('>', 1)
                 return float(left.strip()) > float(right.strip())
-            elif '&' in expr:
-                parts = expr.split('&')
-                return all(self._evaluate_condition(part.strip()) for part in parts)
-            elif '|' in expr:
-                parts = expr.split('|')
-                return any(self._evaluate_condition(part.strip()) for part in parts)
             else:
                 # 处理数值条件：如果是数字，非零为真
                 expr_stripped = expr.strip()

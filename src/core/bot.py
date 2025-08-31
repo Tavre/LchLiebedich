@@ -347,6 +347,8 @@ class MessageHandler:
             "user_id": event.user_id,
             "group_id": event.group_id,
             "raw_message": event.raw_message,
+            "message": event.message,
+            "sender": event.sender,
             "time": event.time
         }
         self.recent_messages.append(message_data)
