@@ -1,4 +1,4 @@
-# LchLiebedich - V0.2.1
+# LchLiebedich - V0.1.2.1
 
 一个基于OneBot V11协议的机器人框架，使用python编写，支持桌面环境和图形化界面，并且使用伪代码编写运行功能，小白也可快速上手
 
