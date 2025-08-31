@@ -180,3 +180,5 @@
 
 2025-08-31 02:10:31 | ERROR    | src.gui.main_window_qt:load_embedded_config:2416 - 加载配置失败: 'SiLineEdit' object has no attribute 'setText'
 
+2025-08-31 14:04:13 | ERROR    | src.gui.main_window_qt:open_stats_window:2326 - 打开统计窗口失败: QMainWindow(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'OneBotFramework'
+

@@ -500,6 +500,16 @@ class MainWindowQt(QMainWindow):
             QMainWindow {
                 background-color: #f5f5f5;
                 border: none;
+                outline: none;
+            }
+            QWidget {
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            QFrame {
+                border: none;
+                outline: none;
             }
             QTabWidget::pane {
                 border: none;
@@ -542,6 +552,13 @@ class MainWindowQt(QMainWindow):
                 color: #0078d4;
                 font-size: 14px;
                 font-weight: 600;
+            }
+            QLabel {
+                color: #333333;
+                font-weight: 400;
+                background-color: transparent;
+                border: none;
+                outline: none;
             }
             QLineEdit {
                 background-color: white;
@@ -943,20 +960,9 @@ class MainWindowQt(QMainWindow):
         QMessageBox.about(
             self, "关于 lchliebedich",
             "<h3>lchliebedich 词库管理器</h3>"
-            "<p>版本: 1.0.0</p>"
+            "<p>版本: 0.1.2</p>"
             "<p>一个基于PyQt5的现代化词库管理工具</p>"
             "<p>支持OneBot协议的QQ机器人词库管理</p>"
-            "<p><b>快捷键:</b></p>"
-            "<ul>"
-            "<li>Ctrl+I: 导入词库</li>"
-            "<li>Ctrl+E: 导出词库</li>"
-            "<li>F5: 重载词库</li>"
-            "<li>Ctrl+T: 测试连接</li>"
-            "<li>Ctrl+W: 词库管理</li>"
-            "<li>Ctrl+,: 配置管理</li>"
-            "<li>Ctrl+1-4: 切换页面</li>"
-            "<li>F11: 全屏切换</li>"
-            "</ul>"
         )
         
     def show_help(self):
@@ -1068,6 +1074,9 @@ class MainWindowQt(QMainWindow):
                 font-weight: 700;
                 color: #E8E8E8;
                 margin-bottom: 8px;
+                border: none;
+                outline: none;
+                background-color: transparent;
             }
         """)
         layout.addWidget(title)
@@ -1084,9 +1093,9 @@ class MainWindowQt(QMainWindow):
         status_layout.setContentsMargins(0, 0, 0, 0)
         
         status_label = QLabel("连接状态")
-        status_label.setStyleSheet("color: #B0B0B0; font-size: 14px;")
+        status_label.setStyleSheet("color: #B0B0B0; font-size: 14px; border: none; outline: none; background-color: transparent;")
         self.engine_status_label = QLabel("未连接")
-        self.engine_status_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600;")
+        self.engine_status_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600; border: none; outline: none; background-color: transparent;")
         
         status_layout.addWidget(status_label)
         status_layout.addStretch()
@@ -1161,6 +1170,9 @@ class MainWindowQt(QMainWindow):
                 font-weight: 700;
                 color: #E8E8E8;
                 margin-bottom: 8px;
+                border: none;
+                outline: none;
+                background-color: transparent;
             }
         """)
         layout.addWidget(title)
@@ -1177,9 +1189,9 @@ class MainWindowQt(QMainWindow):
         count_layout.setContentsMargins(0, 0, 0, 0)
         
         count_label = QLabel("词库数量")
-        count_label.setStyleSheet("color: #B0B0B0; font-size: 14px;")
+        count_label.setStyleSheet("color: #B0B0B0; font-size: 14px; border: none; outline: none; background-color: transparent;")
         self.wordlib_count_label = QLabel("0")
-        self.wordlib_count_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600;")
+        self.wordlib_count_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600; border: none; outline: none; background-color: transparent;")
         
         count_layout.addWidget(count_label)
         count_layout.addStretch()
@@ -1192,9 +1204,9 @@ class MainWindowQt(QMainWindow):
         size_layout.setContentsMargins(0, 0, 0, 0)
         
         size_label = QLabel("总大小")
-        size_label.setStyleSheet("color: #B0B0B0; font-size: 14px;")
+        size_label.setStyleSheet("color: #B0B0B0; font-size: 14px; border: none; outline: none; background-color: transparent;")
         self.wordlib_size_label = QLabel("0 KB")
-        self.wordlib_size_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600;")
+        self.wordlib_size_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600; border: none; outline: none; background-color: transparent;")
         
         size_layout.addWidget(size_label)
         size_layout.addStretch()
@@ -1207,9 +1219,9 @@ class MainWindowQt(QMainWindow):
         reload_layout.setContentsMargins(0, 0, 0, 0)
         
         reload_label = QLabel("最后重载")
-        reload_label.setStyleSheet("color: #B0B0B0; font-size: 14px;")
+        reload_label.setStyleSheet("color: #B0B0B0; font-size: 14px; border: none; outline: none; background-color: transparent;")
         self.last_reload_label = QLabel("从未")
-        self.last_reload_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600;")
+        self.last_reload_label.setStyleSheet("color: #E8E8E8; font-size: 14px; font-weight: 600; border: none; outline: none; background-color: transparent;")
         
         reload_layout.addWidget(reload_label)
         reload_layout.addStretch()
@@ -1246,6 +1258,9 @@ class MainWindowQt(QMainWindow):
                 font-weight: 700;
                 color: #E8E8E8;
                 margin-bottom: 8px;
+                border: none;
+                outline: none;
+                background-color: transparent;
             }
         """)
         layout.addWidget(title)

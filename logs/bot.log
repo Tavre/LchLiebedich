@@ -6519,3 +6519,236 @@
 2025-08-31 13:45:14 | INFO     | src.core.bot:_handle_meta_event:601 - [OneBot] 机器人信息 - 昵称:未知 ID:未知
 2025-08-31 13:45:14 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
 2025-08-31 13:45:15 | INFO     | src.gui.main_window_qt:closeEvent:2351 - 正在关闭主窗口...
+2025-08-31 13:58:57 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 13:58:57 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 13:58:57 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 13:58:57 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 13:58:57 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 13:58:57 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 13:58:57 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 13:58:57 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 13:58:57 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 13:58:57 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 13:58:57 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 13:58:57 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 13:58:57 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 13:58:58 | INFO     | src.core.bot:start:319 - HTTP服务器已启动，监听 127.0.0.1:8080
+2025-08-31 13:58:58 | INFO     | src.core.bot:start:655 - OneBot框架启动完成
+2025-08-31 13:59:44 | INFO     | src.gui.main_window_qt:closeEvent:2351 - 正在关闭主窗口...
+2025-08-31 13:59:54 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 13:59:54 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 13:59:54 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 13:59:54 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 13:59:54 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 13:59:54 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 13:59:54 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 13:59:54 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 13:59:54 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 13:59:54 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 13:59:54 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 13:59:55 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 13:59:55 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 13:59:55 | INFO     | src.core.bot:start:319 - HTTP服务器已启动，监听 127.0.0.1:8080
+2025-08-31 13:59:55 | INFO     | src.core.bot:start:655 - OneBot框架启动完成
+2025-08-31 14:00:55 | INFO     | src.gui.main_window_qt:closeEvent:2351 - 正在关闭主窗口...
+2025-08-31 14:01:11 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 14:01:11 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 14:01:11 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:01:11 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 14:01:11 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 14:01:11 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 14:01:11 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 14:01:11 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 14:01:11 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 14:01:11 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 14:01:11 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 14:01:11 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:01:11 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 14:01:12 | INFO     | src.core.bot:start:319 - HTTP服务器已启动，监听 127.0.0.1:8080
+2025-08-31 14:01:12 | INFO     | src.core.bot:start:655 - OneBot框架启动完成
+2025-08-31 14:01:38 | INFO     | src.gui.main_window_qt:clear_message_log:1608 - 消息日志已清空
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:150 - [OneBot] 收到OneBot WebSocket连接请求: Address(host='127.0.0.1', port=53471)
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:151 - [OneBot] WebSocket headers: {'host': '127.0.0.1:8080', 'x-client-role': 'Universal', 'x-self-id': '3350322656', 'user-agent': 'Lagrange.OneBot', 'authorization': 'Bearer', 'connection': 'Upgrade', 'upgrade': 'websocket', 'sec-websocket-key': '4GyfOzdxd0OilSvuY6qHAQ==', 'sec-websocket-version': '13'}
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:152 - [OneBot] WebSocket query params: {}
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:153 - [OneBot] WebSocket scope: /onebot/v11/ws
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:164 - [OneBot] 准备接受WebSocket连接，子协议: None
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:166 - [OneBot] OneBot WebSocket连接已建立: Address(host='127.0.0.1', port=53471), 子协议: None
+2025-08-31 14:02:08 | INFO     | src.core.bot:websocket_onebot:199 - [OneBot] 收到元事件 - 类型:lifecycle
+2025-08-31 14:02:08 | INFO     | src.core.bot:_handle_meta_event:595 - [OneBot] OneBot连接建立
+2025-08-31 14:02:08 | DEBUG    | src.core.bot:_make_request:68 - [OneBot] API请求成功: get_login_info -> {'status': 'ok', 'retcode': 0, 'data': {'user_id': 3350322656, 'nickname': 'T.'}, 'echo': None}
+2025-08-31 14:02:08 | INFO     | src.core.bot:_handle_meta_event:601 - [OneBot] 机器人信息 - 昵称:未知 ID:未知
+2025-08-31 14:02:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:23 | INFO     | src.core.bot:websocket_onebot:185 - [OneBot] 收到群聊消息 - 群:903128683 用户:2987304764 内容:[{'type': 'text', 'data': {'text': '1145'}}]
+2025-08-31 14:02:23 | INFO     | src.core.bot:_handle_message_event:499 - [OneBot] 开始处理群聊消息 - 群:903128683 用户:2987304764
+2025-08-31 14:02:23 | INFO     | src.core.bot:_handle_message_event:519 - [OneBot] 消息内容: [{'type': 'text', 'data': {'text': '1145'}}] (发送者: TenKavr)
+2025-08-31 14:02:23 | DEBUG    | src.core.bot:_handle_message_event:522 - [OneBot] 开始处理消息: '[{'type': 'text', 'data': {'text': '1145'}}]'
+2025-08-31 14:02:23 | DEBUG    | src.core.bot:_make_request:68 - [OneBot] API请求成功: get_group_info -> {'status': 'ok', 'retcode': 0, 'data': {'group_id': 903128683, 'group_name': 'Fivx-国家文明·先启', 'member_count': 21, 'max_member_count': 200}, 'echo': None}
+2025-08-31 14:02:23 | DEBUG    | src.core.bot:_handle_message_event:524 - [OneBot] 消息处理结果: None
+2025-08-31 14:02:23 | INFO     | src.core.bot:_handle_message_event:549 - [OneBot] 词库无匹配 - 群聊消息 群:903128683 用户:2987304764 内容:'[{'type': 'text', 'data': {'text': '1145'}}]'
+2025-08-31 14:02:23 | DEBUG    | src.core.bot:_handle_message_event:550 - [OneBot] 消息处理完成，无需回复
+2025-08-31 14:02:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:02:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:03:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:13 | ERROR    | src.gui.main_window_qt:open_stats_window:2326 - 打开统计窗口失败: QMainWindow(parent: Optional[QWidget] = None, flags: Union[Qt.WindowFlags, Qt.WindowType] = Qt.WindowFlags()): argument 1 has unexpected type 'OneBotFramework'
+2025-08-31 14:04:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:04:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:28 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 14:05:28 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 14:05:28 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:05:28 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 14:05:28 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 14:05:28 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 14:05:28 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 14:05:28 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 14:05:28 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 14:05:28 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 14:05:28 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 14:05:29 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:05:29 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 14:05:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:05:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:06:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:00 | INFO     | src.core.bot:websocket_onebot:185 - [OneBot] 收到群聊消息 - 群:445446344 用户:553153209 内容:[{'type': 'image', 'data': {'file': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'filename': '7E74B68BD71803B77BD99FDAA45178CC.jpg', 'url': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'summary': '[图片]', 'subType': 0}}]
+2025-08-31 14:07:00 | INFO     | src.core.bot:_handle_message_event:499 - [OneBot] 开始处理群聊消息 - 群:445446344 用户:553153209
+2025-08-31 14:07:00 | INFO     | src.core.bot:_handle_message_event:519 - [OneBot] 消息内容: [{'type': 'image', 'data': {'file': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'filename': '7E74B68BD71803B77BD99FDAA45178CC.jpg', 'url': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'summary': '[图片]', 'subType': 0}}] (发送者: Tavre)
+2025-08-31 14:07:00 | DEBUG    | src.core.bot:_handle_message_event:522 - [OneBot] 开始处理消息: '[{'type': 'image', 'data': {'file': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'filename': '7E74B68BD71803B77BD99FDAA45178CC.jpg', 'url': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'summary': '[图片]', 'subType': 0}}]'
+2025-08-31 14:07:00 | DEBUG    | src.core.bot:_make_request:68 - [OneBot] API请求成功: get_group_info -> {'status': 'ok', 'retcode': 0, 'data': {'group_id': 445446344, 'group_name': '微信支付', 'member_count': 27, 'max_member_count': 200}, 'echo': None}
+2025-08-31 14:07:00 | DEBUG    | src.core.bot:_handle_message_event:524 - [OneBot] 消息处理结果: None
+2025-08-31 14:07:00 | INFO     | src.core.bot:_handle_message_event:549 - [OneBot] 词库无匹配 - 群聊消息 群:445446344 用户:553153209 内容:'[{'type': 'image', 'data': {'file': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'filename': '7E74B68BD71803B77BD99FDAA45178CC.jpg', 'url': 'https://multimedia.nt.qq.com.cn/download?appid=1407&fileid=EhQOH1puXjhyXPUSql0yy8clZvEU3RjR_wcg_woootXm_7C0jwMyBHByb2RQgL2jAVoQOvTgYjE7SB5f_sWxtT9K4noCIdw&rkey=CAESOE4_cASDm1t1rR_rJkvrqfFI8dIzDIhnOVpYnf7DySydE2_O0bvElHbhMEAJ74PHqGeZYKIrHWj6', 'summary': '[图片]', 'subType': 0}}]'
+2025-08-31 14:07:00 | DEBUG    | src.core.bot:_handle_message_event:550 - [OneBot] 消息处理完成，无需回复
+2025-08-31 14:07:01 | INFO     | src.core.bot:websocket_onebot:185 - [OneBot] 收到群聊消息 - 群:445446344 用户:553153209 内容:[{'type': 'text', 'data': {'text': '逆天'}}]
+2025-08-31 14:07:01 | INFO     | src.core.bot:_handle_message_event:499 - [OneBot] 开始处理群聊消息 - 群:445446344 用户:553153209
+2025-08-31 14:07:01 | INFO     | src.core.bot:_handle_message_event:519 - [OneBot] 消息内容: [{'type': 'text', 'data': {'text': '逆天'}}] (发送者: Tavre)
+2025-08-31 14:07:01 | DEBUG    | src.core.bot:_handle_message_event:522 - [OneBot] 开始处理消息: '[{'type': 'text', 'data': {'text': '逆天'}}]'
+2025-08-31 14:07:02 | DEBUG    | src.core.bot:_make_request:68 - [OneBot] API请求成功: get_group_info -> {'status': 'ok', 'retcode': 0, 'data': {'group_id': 445446344, 'group_name': '微信支付', 'member_count': 27, 'max_member_count': 200}, 'echo': None}
+2025-08-31 14:07:02 | DEBUG    | src.core.bot:_handle_message_event:524 - [OneBot] 消息处理结果: None
+2025-08-31 14:07:02 | INFO     | src.core.bot:_handle_message_event:549 - [OneBot] 词库无匹配 - 群聊消息 群:445446344 用户:553153209 内容:'[{'type': 'text', 'data': {'text': '逆天'}}]'
+2025-08-31 14:07:02 | DEBUG    | src.core.bot:_handle_message_event:550 - [OneBot] 消息处理完成，无需回复
+2025-08-31 14:07:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:07:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:08:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:53 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:09:58 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:03 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:06 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 14:10:06 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 14:10:06 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:10:06 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 14:10:06 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 14:10:06 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 14:10:06 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 14:10:06 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 14:10:06 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 14:10:06 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 14:10:06 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 14:10:07 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:10:07 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 14:10:08 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:13 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:18 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:23 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:28 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:33 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:38 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:43 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:48 | DEBUG    | src.core.bot:websocket_onebot:197 - [OneBot] 收到心跳事件
+2025-08-31 14:10:52 | INFO     | src.core.bot:websocket_onebot:212 - OneBot WebSocket连接已断开
+2025-08-31 14:10:52 | INFO     | src.core.bot:websocket_onebot:220 - OneBot WebSocket连接已断开
+2025-08-31 14:10:56 | INFO     | src.gui.main_window_qt:closeEvent:2366 - 正在关闭主窗口...
+2025-08-31 14:11:16 | INFO     | src.utils.logger:setup_logger:79 - 日志系统初始化完成
+2025-08-31 14:11:16 | INFO     | __main__:main:30 - OneBot引擎启动器启动
+2025-08-31 14:11:16 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:11:16 | INFO     | __main__:main:38 - 配置加载完成
+2025-08-31 14:11:16 | INFO     | __main__:main:45 - lchliebedich词库管理器初始化完成
+2025-08-31 14:11:16 | INFO     | src.core.onebot_engine:_start_monitoring:126 - OneBot连接监听器已启动，等待外部引擎连接...
+2025-08-31 14:11:16 | INFO     | __main__:main:72 - OneBot连接监听器已准备就绪，等待外部引擎连接
+2025-08-31 14:11:16 | INFO     | __main__:main:94 - OneBot框架已启动
+2025-08-31 14:11:16 | INFO     | src.core.bot:start:650 - OneBot框架启动中...
+2025-08-31 14:11:16 | INFO     | src.core.bot:start:283 - 正在启动WebSocket服务器，监听 127.0.0.1:8080
+2025-08-31 14:11:16 | INFO     | src.core.bot:start:312 - HTTP服务器配置完成，开始启动...
+2025-08-31 14:11:17 | INFO     | src.config.settings:load_config:104 - 配置文件 config.yaml 加载成功
+2025-08-31 14:11:17 | INFO     | __main__:main:104 - 启动GUI界面
+2025-08-31 14:11:17 | INFO     | src.core.bot:start:319 - HTTP服务器已启动，监听 127.0.0.1:8080
+2025-08-31 14:11:17 | INFO     | src.core.bot:start:655 - OneBot框架启动完成
+2025-08-31 14:11:41 | INFO     | src.gui.main_window_qt:closeEvent:2366 - 正在关闭主窗口...
